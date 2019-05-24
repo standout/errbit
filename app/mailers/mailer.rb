@@ -9,7 +9,6 @@ class Mailer < ActionMailer::Base
           'X-Errbit-Host'            => Errbit::Config.host,
           'X-Mailer'                 => 'Errbit',
           'X-Auto-Response-Suppress' => 'OOF, AutoReply',
-          'Precedence'               => 'bulk'
 
   def err_notification(error_report)
     @notice   = NoticeDecorator.new error_report.notice
