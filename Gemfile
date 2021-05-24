@@ -36,8 +36,6 @@ gem 'hoptoad_notifier', "~> 2.4"
 # Notification services
 # ---------------------------------------
 gem 'campy'
-# Hipchat
-gem 'hipchat'
 # Google Talk
 gem 'xmpp4r', require: ["xmpp4r", "xmpp4r/muc"]
 # Hoiio (SMS)
@@ -88,7 +86,7 @@ group :heroku, :production do
 end
 
 group :no_docker, :test, :development do
-  gem 'therubyracer', platform: :ruby # C Ruby (MRI) or Rubinius, but NOT Windows
+  gem 'mini_racer', platform: :ruby # C Ruby (MRI) or Rubinius, but NOT Windows
 end
 
 gem 'puma'
